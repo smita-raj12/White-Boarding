@@ -1,0 +1,22 @@
+Checking for Uniqueness
+
+Input: "hello"
+
+Output: false
+
+Input: "copyright"
+
+Output: true
+
+function duplicates(string) {
+  let stringArray = []
+
+  for (let i = 0; i < string.length; i++) {
+    
+    if (stringArray.indexOf(string[i]) !== -1) {
+      return true
+    }
+    stringArray.push(string[i])
+  }
+  return false
+}

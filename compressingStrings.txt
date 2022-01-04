@@ -1,0 +1,19 @@
+Compressing Strings
+Input: "aaabccdddda"
+
+Output: "3ab2c4da"
+
+function compressor(string){
+  let output = '';
+  let count = 0;
+  for (let i =0; i <string.length; i++){
+    count ++;
+    if(string[i] !== string[i+1]) {
+      output += count + string[i];
+      count = 0;
+    }
+  }
+  return output;
+}
+
+compressor( "aaabccdddda")

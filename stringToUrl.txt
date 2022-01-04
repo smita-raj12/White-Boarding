@@ -1,0 +1,24 @@
+Question #1: Turning Strings to URLs
+
+Input: "Jasmine Ann Jones"
+
+Output: "Jasmine%20Ann%20Jones"
+
+// convert string to array with split method
+// iterate each element in an array 
+// add "%20" with join method
+
+
+function stringUrl(string){
+    let url =" ";
+    let splitArray = [];
+    splitArray = string.split(" ");
+    console.log(splitArray);
+    for(let i=0; i<= splitArray.length; i++){
+        console.log(splitArray[i]);
+        url = splitArray.join("%20");
+    } 
+    return url;
+}
+
+stringUrl("Jasmine Ann Jones")
